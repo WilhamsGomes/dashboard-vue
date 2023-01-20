@@ -4,24 +4,20 @@
         <div class="title">
             <h1>Gmail</h1>
         </div>
-        <div class="links">
-            <div class="link active">
+
+        <ul class="links">
+            <li 
+                class="link" 
+                v-for="router in routers" 
+                :key="router.id"
+                :class="router.active && 'active'"
+                @click="activeClass(router.id)"
+            >
                 <i> </i>
-                <router-link to="/">Home</router-link> 
-            </div>
-            <div class="link">
-                <i> </i>
-                <router-link to="/profile">Profile</router-link> 
-            </div>
-            <div class="link">
-                <i> </i>
-                <router-link to="/settings">Settings</router-link> 
-            </div>
-            <div class="link">
-                <i> </i>
-                <router-link to="/about">About</router-link> 
-            </div>
-        </div>
+                <router-link :to="router.link">{{ router.title }}</router-link> 
+            </li>
+        </ul>
+
         <div class="subInfos">
             <h1>Try to new update</h1>
             <p>Version 13.9</p>
@@ -41,7 +37,27 @@
   import { defineComponent } from 'vue';
   
   export default defineComponent({
-    name: 'NavBar'
+    name: 'NavBar',
+    data() {
+        return{
+            isActive: true,
+            routers: [
+                {id:0, link: "/", icon: "", title: "Home", active: true},
+                {id:1, link: "/profile", icon: "", title: "Profile", active: false},
+                {id:2, link: "/settings", icon: "", title: "Settings", active: false},
+                {id:3, link: "/about", icon: "", title: "About", active: false},
+            ],
+        }
+    },
+    methods: {
+        activeClass (id: number) {
+            this.routers[0].active = false
+            this.routers[1].active = false
+            this.routers[2].active = false
+            this.routers[3].active = false
+            this.routers[id].active = !this.routers[id].active
+        }
+    }
   });
 </script>
 
@@ -76,27 +92,37 @@
 }
 
 .links{
-    width: 100%;
+    width: 65%;
+    gap: 12px;
+}
+
+ul{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 12px;
 }
 
+li{
+    margin-left: -40px;
+}
+
 .link{
-    width: 80%;
+    width: 100%;
     border-radius: 6px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 
 .link i{
     width: 48px;
     height: 32px;
-    margin-left: 32px;
     background-color: #F74C41;
-    
+    margin-left: 10px;
+    border-radius: 6px;
 }
 .links a{
     width: 100%;
@@ -110,7 +136,6 @@
 
 .active{
     background-color: #2C2A36;
-    
 }
 
 .active a{
@@ -135,7 +160,6 @@
     margin-top: 20px;
     background-color: #101014;
 }
-
 
 .logouf button{
     background-color: #F74C41;

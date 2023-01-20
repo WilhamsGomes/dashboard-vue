@@ -1,6 +1,7 @@
 <template>
     <div class="settings">
       <h1>Settings View</h1>
+      <h2>{{ $store.state.search }}</h2>
     </div>
 </template>
   

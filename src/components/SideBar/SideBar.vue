@@ -3,10 +3,11 @@
         <div class="titles">
             <span>Good Morning</span>, Analysis completed
         </div>
-        <div class="infos">
-            <form>
-                <input type="text" placeholder="Search"/>
-            </form>
+        <div class="infosActions">
+            <div class="search">
+                <button @click="handleSearch" type="button"> <img src="../../assets/svg/search-3-48.png" width="18"/> </button>
+                <input type="text" placeholder="Search" v-model="inputSearch"/>
+            </div>
             <div class="buttons">
                 <button> </button>
                 <button> </button>
@@ -19,8 +20,18 @@
     import { defineComponent } from 'vue';
   
     export default defineComponent({
-        name: 'SideBar'
-    });
+        name: 'SideBar',
+        data(){
+            return{
+                inputSearch: '',
+            }
+        },
+        methods:{
+            handleSearch(){
+                this.$store.commit('changeSearch', this.inputSearch)
+            }
+        }
+    }); 
 </script>
 
 <style scoped>
@@ -46,23 +57,24 @@
     font-weight: bold;
 }
 
-.infos{
+.infosActions{
     display: flex;
     gap: 30px;
 }
 
-form input{
+.search input{
     width: 250px;
     height: 38px;
     border: none;
     border-radius: 12px;
     outline: none;
     background-color: #1E1D26;
+    padding-left: 40px;
+    color: rgb(170, 165, 165);
 } 
 
-form input::placeholder{
-    padding: 10px;
-    color: #fff;
+.search input::placeholder{
+    color: rgb(170, 165, 165);
 }
 
 .buttons{
@@ -71,12 +83,24 @@ form input::placeholder{
     gap: 20px;
 }
 
-button{
+.buttons button{
     width: 32px;
     height: 32px;
     border-radius: 8px;
     background-color: #F74C41;
     border: none;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.search button{
+    z-index: 9;
+    margin-right: -30px;
+    border: none;
+    background: transparent;
 }
 
 </style>

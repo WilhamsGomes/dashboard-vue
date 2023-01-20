@@ -1,6 +1,7 @@
 <template>
     <div class="profile">
       <h1>Profile View</h1>
+      <h2>{{ $store.state.search }}</h2>
     </div>
 </template>
   
