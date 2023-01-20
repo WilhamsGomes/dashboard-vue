@@ -53,16 +53,22 @@
 
 form input{
     width: 250px;
-    height: 32px;
+    height: 38px;
     border: none;
     border-radius: 12px;
     outline: none;
-}
+    background-color: #1E1D26;
+} 
 
 form input::placeholder{
     padding: 10px;
-    color: #F74C41;
-    font-weight: bold;
+    color: #fff;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 button{
@@ -70,7 +76,7 @@ button{
     height: 32px;
     border-radius: 8px;
     background-color: #F74C41;
-
+    border: none;
 }
 
 </style>
