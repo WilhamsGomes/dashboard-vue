@@ -5,18 +5,21 @@
       <SideBar/>
       <router-view/>
     </div>
+    <SideBarRight/>
   </main>
 </template>
 
-<script>
+<script lang="ts">
   import { defineComponent } from 'vue'
   import NavBar from './components/NavBar/NavBar.vue';
   import SideBar from './components/SideBar/SideBar.vue';
+  import SideBarRight from './components/SideBarRight/SideBarRight.vue';
 
   export default defineComponent({
     components:{
       NavBar,
-      SideBar
+      SideBar,
+      SideBarRight
     }
   })
 </script>
