@@ -26,7 +26,7 @@ export default defineComponent({
 <style scoped>
 
 .balance{
-    width: 15%;
+    width: 40%;
     background-color: #1E1D26;
     height: 20vh;
     border-radius: 12px;

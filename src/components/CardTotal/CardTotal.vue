@@ -29,17 +29,23 @@ export default defineComponent({
     align-items: center;
     justify-content: space-around;
     background-color: #1E1D26;
-    width: 30%;
+    width: 50%;
     height: 20vh;
     border-radius: 12px;
     padding: 20px;
 }
 
 .percentage{
-    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
     padding: 20px;
-    background-color: transparent;
-    border: 5px solid #F74C41;
+    background-color: #F74C41;
+    /* border: 5px solid #F74C41; */
     border-radius: 50%;
 }
 
