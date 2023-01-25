@@ -5,30 +5,10 @@
         <button>See all</button>
       </div>
       <ul class="messages">
-        <li class="email">
+        <li class="email" v-for="email, index in recentEmails" :key="index">
             <span> </span>
-            <h4>wdsfgwa@gmail.com</h4>
-            <p>Status</p>
-        </li>
-        <li class="email">
-            <span> </span>
-            <h4>wdsfgwa@gmail.com</h4>
-            <p>Status</p>
-        </li>
-        <li class="email">
-            <span> </span>
-            <h4>wdsfgwa@gmail.com</h4>
-            <p>Status</p>
-        </li>
-        <li class="email">
-            <span> </span>
-            <h4>wdsfgwa@gmail.com</h4>
-            <p>Status</p>
-        </li>
-        <li class="email">
-            <span> </span>
-            <h4>wdsfgwa@gmail.com</h4>
-            <p>Status</p>
+            <h4>{{ email.email }}</h4>
+            <p :class="email.status">{{ email.status }}</p>
         </li>
       </ul>
     </div>
@@ -40,6 +20,15 @@
       name:"RecenteEmails",
       data (){
           return{
+            recentEmails: [
+                {icon: "", email: "wil@gmail.com", status: "active"},
+                {icon: "", email: "wil@gmail.com", status: "inactive"},
+                {icon: "", email: "wil@gmail.com", status: "active"},
+                {icon: "", email: "wil@gmail.com", status: "inactive"},
+                {icon: "", email: "wil@gmail.com", status: "active"},
+                {icon: "", email: "wil@gmail.com", status: "inactive"},
+                {icon: "", email: "wil@gmail.com", status: "inactive"},
+            ]
           }
       }
   })
@@ -119,4 +108,11 @@
   border-radius: 10px;
 }
 
+.active{
+    color: green !important;
+}
+
+.inactive{
+    color: red !important;
+}
 </style>
