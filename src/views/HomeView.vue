@@ -63,7 +63,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 84vh;
+  height: 100vh;
 }
 
 </style>
