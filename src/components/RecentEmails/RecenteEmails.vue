@@ -37,7 +37,7 @@
 <style scoped>
 
 .emails{
-    width: 80%;
+    width: 90%;
     height: 50vh;
     overflow-y: auto;
     padding: 10px;

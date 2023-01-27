@@ -1,6 +1,7 @@
 <template>
     <header class="header">
         <div class="titles">
+            <button @click="handleNavBar">-</button>
             <span>Good Morning</span>, Analysis completed
         </div>
         <div class="infosActions">
@@ -29,6 +30,9 @@
         methods:{
             handleSearch(){
                 this.$store.commit('changeSearch', this.inputSearch)
+            },
+            handleNavBar(){
+                this.$store.commit('changeNavBar')
             }
         }
     }); 
@@ -49,12 +53,22 @@
     align-items: center;
     justify-content: center;
     color: rgb(170, 165, 165);
+    gap: 20px;
 }
 
 .titles span{
     font-size: 2.5rem;
     color: #fff;
     font-weight: bold;
+}
+
+.titles button{
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: #F74C41;
+    color: #fff;
 }
 
 .infosActions{

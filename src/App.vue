@@ -1,6 +1,8 @@
 <template>
   <main class="app">
-    <NavBar/>
+    <transition name="slide-fade">
+      <NavBar v-show="$store.state.openNavBar"/>
+    </transition>
     <div class="content">
       <SideBar/>
       <router-view/>

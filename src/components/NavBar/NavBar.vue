@@ -74,6 +74,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    transition:  0.4s ease-out;
 }
 
 .title{
