@@ -43,8 +43,11 @@ export default defineComponent({
 
 .home{
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  height: 100vh;
+  height: 90vh;
+  width: 90%;
 }
 .container{
   width: 60%;

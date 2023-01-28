@@ -41,11 +41,12 @@
 <style scoped>
 
 .header{
-    width: 100%;
+    width: 85%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .titles{
