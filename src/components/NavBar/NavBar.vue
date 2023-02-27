@@ -66,7 +66,7 @@
 .navbar{
     background: #1E1D26;
     height: 100vh;
-    width: 25%;
+    width: 280px;
     /* border-radius: 16px; */
     /* margin-left: 5%; */
     display: flex;

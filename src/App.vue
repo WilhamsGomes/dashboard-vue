@@ -3,11 +3,12 @@
     <transition name="slide-fade">
       <NavBar v-show="$store.state.openNavBar"/>
     </transition>
-    <div class="content">
+    <div class="container">
       <SideBar/>
-      <router-view/>
+      <div class="content">
+        <router-view/>
+      </div>
     </div>
-    
   </main>
 </template>
 
@@ -30,15 +31,21 @@
 
 .app{
   display: flex;
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content{
   width: 100%;
-  max-height: 100vh;
-  padding: 15px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+  max-width: 1020px;
 }
 
 </style>

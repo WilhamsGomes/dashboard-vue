@@ -45,6 +45,7 @@ export default defineComponent({
   display: flex;
   gap: 20px;
   height: 100vh;
+  width: 100%;
 }
 .container{
   width: 60%;

@@ -42,6 +42,7 @@
 
 .header{
     width: 100%;
+    max-width: 1020px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -77,8 +78,8 @@
 }
 
 .search input{
-    width: 250px;
-    height: 38px;
+    width: 180px;
+    height: 32px;
     border: none;
     border-radius: 12px;
     outline: none;
@@ -95,6 +96,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-right: 20px;
 }
 
 .buttons button{
