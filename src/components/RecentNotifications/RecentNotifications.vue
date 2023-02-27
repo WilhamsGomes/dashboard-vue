@@ -42,7 +42,7 @@
     background-color: #1E1D26;
     border-radius: 6px;
     width: 90%;
-    height: 36vh;
+    height: 32vh;
     padding: 10px;
     overflow-y: auto;
 }

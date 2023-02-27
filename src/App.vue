@@ -40,12 +40,6 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.content{
-  width: 100%;
-  max-width: 1020px;
 }
 
 </style>
