@@ -38,7 +38,7 @@
 
 .emails{
     width: 90%;
-    height: 50vh;
+    height: 53vh;
     overflow-y: auto;
     padding: 10px;
 }

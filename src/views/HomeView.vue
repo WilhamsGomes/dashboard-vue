@@ -62,11 +62,12 @@ export default defineComponent({
 }
 
 .recents{
+  height: 560px;
   width: 40%;
   display: flex;
+  gap: 32px;
+  align-items: center;
   flex-direction: column;
-  gap: 20px;
-  height: 100vh;
 }
 
 </style>

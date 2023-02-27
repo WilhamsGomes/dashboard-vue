@@ -56,7 +56,7 @@
 .graphic{
     background-color: #1E1D26;
     max-width: 100%;
-    height: 50vh;
+    height: 55vh;
     border-radius: 12px;
     padding: 20px;
 }
