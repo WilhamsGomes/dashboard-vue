@@ -1,6 +1,6 @@
 <template>
-    <div class="settings">
-      <h1>Settings View</h1>
+    <div class="profile">
+      <h1>Messages View</h1>
       <h2>{{ $store.state.search }}</h2>
     </div>
 </template>
@@ -9,7 +9,7 @@
   import { defineComponent } from 'vue';
   
   export default defineComponent({
-    name: 'SettingsView',
+    name: 'ProfileView',
     components: {
     },
   });

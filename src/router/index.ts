@@ -12,14 +12,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path:'/profile',
-    name: 'profile',
-    component: () => import('../views/ProfileView.vue')
+    path:'/messages',
+    name: 'messages',
+    component: () => import('../views/MessagesView.vue')
   },
   {
-    path:'/settings',
-    name: 'settings',
-    component: () => import('../views/SettingsView.vue')
+    path:'/statistics',
+    name: 'statistics',
+    component: () => import('../views/StatisticsView.vue')
   },
 ]
 

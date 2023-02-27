@@ -43,8 +43,8 @@
             isActive: true,
             routers: [
                 {id:0, link: "/", icon: "", title: "Home", active: true},
-                {id:1, link: "/profile", icon: "", title: "Profile", active: false},
-                {id:2, link: "/settings", icon: "", title: "Settings", active: false},
+                {id:1, link: "/messages", icon: "", title: "Messages", active: false},
+                {id:2, link: "/statistics", icon: "", title: "Statistics", active: false},
                 {id:3, link: "/about", icon: "", title: "About", active: false},
             ],
         }
